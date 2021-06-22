@@ -1,0 +1,45 @@
+@import "./normalize.css";
+/* 主css样式文件 */
+:root {
+  --color-text: #666;
+  --color-high-text: #2b2b2b;
+  --color-icon-bg: #fff1f1;
+  --color-bg: #f5f5f5;
+  --color-content-bg: #fff;
+  --color-main: #d81e06;
+}
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body{
+  font-family: "Helvetica Neue",Helvetica,"PingFang SC","Hiragino Sans GB","Microsoft YaHei","微软雅黑",Arial,sans-serif;
+  user-select: none; /* 禁止用户鼠标在页面上选中文字/图片等 */
+  background: var(--color-bg);
+  color: var(--color-text);
+  /* rem vw/vh */
+  width: 100vw;
+}
+
+a{
+  color: var(--color-text);
+  text-decoration: none;
+}
+/* 清除浮动 */
+.clear-fix::after {
+  clear: both;
+  content: '';
+  display: block;
+  width: 0;
+  height: 0;
+  visibility: hidden;
+}
+/* ie兼容的清除浮动方式 */
+.clear-fix {
+  zoom: 1;
+}
